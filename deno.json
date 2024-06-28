@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "start": "deno run --allow-net --allow-read --allow-env --allow-write --allow-run sc.ts"
+    "start": "deno run --allow-net --allow-read --allow-env --allow-write --allow-run -A --unstable sc.ts"
   },
   "importMap": "import_map.json"
 }
