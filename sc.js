@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer');
+import puppeteer from "https://deno.land/x/puppeteer@16.2.0/mod.ts";
 
-async function scrapeBrainly(url) {
+async function scrapeBrainly(url: string) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(url);
@@ -21,7 +21,10 @@ async function scrapeBrainly(url) {
 
 // Usage example
 const url = 'https://brainly.co.id/tugas/1234567'; // Replace with actual Brainly URL
-scrapeBrainly(url).then(({ textContent, sourceCode }) => {
+try {
+  const { textContent, sourceCode } = await scrapeBrainly(url);
   console.log('Text content:', textContent);
   console.log('Source code:', sourceCode);
-}).catch(console.error);
+} catch (error) {
+  console.error('Error:', error);
+}
