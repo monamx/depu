@@ -62,3 +62,42 @@ getPageSource()
 
 
 
+
+
+
+
+
+
+
+// const puppeteer = require('puppeteer');
+
+// async function getSourceCode(url) {
+//   try {
+//     // Buka browser
+//     const browser = await puppeteer.launch();
+    
+//     // Buka tab baru
+//     const page = await browser.newPage();
+    
+//     // Pergi ke URL yang ditentukan
+//     await page.goto(url, { waitUntil: 'networkidle0' });
+    
+//     // Dapatkan source code
+//     const sourceCode = await page.content();
+    
+//     // Tutup browser
+//     await browser.close();
+    
+//     return sourceCode;
+//   } catch (error) {
+//     console.error('Terjadi kesalahan:', error);
+//   }
+// }
+
+// // Contoh penggunaan
+// const url = 'https://example.com'; // Ganti dengan URL yang sah
+// getSourceCode(url).then((sourceCode) => {
+//   console.log(sourceCode);
+// }).catch((error) => {
+//   console.error('Gagal mendapatkan source code:', error);
+// });
